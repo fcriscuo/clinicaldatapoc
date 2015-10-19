@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.ibm.db2.jcc.DB2Driver"/>
+                <property name="url" value="jdbc:db2://TIDVUDB1.mskcc.org:51009/DVDDB03"/>
+                <property name="username" value="DVCBDAPS"/>
+                <property name="password" value="rye678bob"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="darwinmap/xml/dvcbio/DmtClinicalBrainSpineMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/DmtTimelineBrainSpineMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientAppointmentMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientClinicalNoteMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientClinicalTrialMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientDemographicsMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientDmpPathologyReportMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientFirstActivityMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientIcd9RecordMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientIcdORecordMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientInpatientRecordMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientLabResultMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientLatestActivityMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientMedOrder2Mapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientMedOrderMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientPathologyReportMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientPhramacyRecordMapper.xml"/>
+        <mapper resource="darwinmap/xml/dvcbio/PatientProcedureRecordMapper.xml"/>
+    </mappers>
+
+</configuration>

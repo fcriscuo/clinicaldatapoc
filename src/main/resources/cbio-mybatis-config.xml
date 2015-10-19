@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://miso-dev.cbio.mskcc.org/cgds_gdac?noDatetimeStringSync=true"/>
+                <property name="username" value="cbio"/>
+                <property name="password" value="cbio"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="cbiodata/CbioCancerStudyMapper.xml"/>
+        <mapper resource="cbiodata/CbioClinicalAttributeMapper.xml"/>
+        <mapper resource="cbiodata/CbioClinicalEventDataMapper.xml"/>
+        <mapper resource="cbiodata/CbioClinicalEventMapper.xml"/>
+        <mapper resource="cbiodata/CbioClinicalPatientMapper.xml"/>
+        <mapper resource="cbiodata/CbioClinicalSampleMapper.xml"/>
+        <mapper resource="cbiodata/CbioMutationMapper.xml"/>
+        <mapper resource="cbiodata/CbioPatientMapper.xml"/>
+        <mapper resource="cbiodata/CbioSampleMapper.xml"/>
+        <mapper resource="cbiodata/CbioTypeOfCancerMapper.xml"/>
+
+    </mappers>
+
+</configuration>
